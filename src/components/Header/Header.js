@@ -1,12 +1,12 @@
-import HeaderNav from './HeaderNav';
+import MainNav from './MainNav';
 
-const Header = () => {
+const MainNav = () => {
   return (
     <header className="app-header">
       <div className="logo">
         <img src="/assets/images/logos/main-logo.svg" alt="Iceberg" />
       </div>
-      <HeaderNav />
+      <MainNav />
     </header>
   )
 }
