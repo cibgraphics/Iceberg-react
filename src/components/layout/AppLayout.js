@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import MainNav from '../header/MainNav';
+import Header from '../header/Header';
 
 const AppLayout = (props) => {
   return (
     <>
-      <MainNav />
+      <Header />
       <main>
         <Outlet />
         <p>After Outlet</p>

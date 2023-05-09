@@ -1,6 +1,6 @@
 import MainNav from './MainNav';
 
-const MainNav = () => {
+const Header = () => {
   return (
     <header className="app-header">
       <div className="logo">
