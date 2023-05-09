@@ -5,6 +5,11 @@ const MainNav = () => {
     <nav className="app-nav">
       <ul className="list-unstyled">
         <li>
+          <NavLink to='/'>
+            Home
+          </NavLink>
+        </li>
+        <li>
           <NavLink to='/app'>
             Dashboard
           </NavLink>
@@ -15,11 +20,10 @@ const MainNav = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/'>
-            Logout
+          <NavLink to='/login'>
+            Login
           </NavLink>
         </li>
-        
       </ul>
     </nav>
   )
