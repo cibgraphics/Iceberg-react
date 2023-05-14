@@ -1,5 +1,10 @@
+import { initializeApp } from "firebase/app";
+
 const Login = () => {
-  return <h1>Login</h1>;
+  return (
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader"></div>
+  );
 };
 
 export default Login
