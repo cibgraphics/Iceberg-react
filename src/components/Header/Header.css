@@ -1,0 +1,11 @@
+.app-header {
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.logo {
+  flex-shrink: 0;
+}

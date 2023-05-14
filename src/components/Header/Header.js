@@ -1,4 +1,5 @@
-import HeaderNav from './HeaderNav';
+import MainNav from './MainNav';
+import './Header.css';
 
 const Header = () => {
   return (
@@ -6,7 +7,7 @@ const Header = () => {
       <div className="logo">
         <img src="/assets/images/logos/main-logo.svg" alt="Iceberg" />
       </div>
-      <HeaderNav />
+      <MainNav />
     </header>
   )
 }
