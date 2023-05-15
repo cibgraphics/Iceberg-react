@@ -1,13 +1,17 @@
+
 import MainNav from './MainNav';
-import './Header.css';
+import UserNav from './UserNav';
 
 const Header = () => {
   return (
-    <header className="app-header">
-      <div className="logo">
-        <img src="/assets/images/logos/main-logo.svg" alt="Iceberg" />
+    <header className="app-header container">
+      <div className='content'>
+        <div className="logo">
+          <img src="/assets/images/logos/main-logo.svg" alt="Iceberg" />
+        </div>
+        <MainNav />
+        <UserNav />
       </div>
-      <MainNav />
     </header>
   )
 }

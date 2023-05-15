@@ -6,7 +6,7 @@ TABLES
 
 
 table {
-
+    width: 100%;
 }
 
 thead {
@@ -18,7 +18,9 @@ tfoot {
 }
 
 tbody {
-
+    tr {
+        border-bottom: 1px solid #E7E7E7;
+    }
 }
 
 tr {
@@ -26,11 +28,12 @@ tr {
 }
 
 th {
-
+    padding: 12px;
+    text-align: left;
 }
 
 td {
-
+    padding: 12px;
 }
 
 .cell-5  {width:5%;}

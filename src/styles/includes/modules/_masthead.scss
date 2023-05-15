@@ -5,6 +5,30 @@ MASTHEAD
 */
 
 
-.site-masthead {
+.app-header {
+	background: #eaeaea;
+	position: relative;
 
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		height: 20px;
+		background: var(--white);
+	}
+
+	.content {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+		padding: 10px 20px;
+		position: relative;
+		z-index: 1;
+	}
+}
+
+.logo {
+	flex-shrink: 0;
 }

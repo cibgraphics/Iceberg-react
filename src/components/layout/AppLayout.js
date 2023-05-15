@@ -7,7 +7,6 @@ const AppLayout = (props) => {
       <Header />
       <main>
         <Outlet />
-        <p>This is the main App</p>
       </main>
     </>
   );

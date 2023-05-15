@@ -21,11 +21,11 @@ const data = [{"id":1,"project_name":"Daltfresh","client_name":"Murazik, O'Keefe
 {"id":19,"project_name":"Domainer","client_name":"Sipes Inc","component_amount":92,"estimate_total":54},
 {"id":20,"project_name":"Prodder","client_name":"Rippin LLC","component_amount":78,"estimate_total":257}]
 
-const Dashboard = () => {
+const Projects = () => {
   return (
     <div>
-      <h1>Dashboard</h1>
-      <table style={{width: '100%'}}>
+      <h1>Projects</h1>
+      <table>
         <thead>
           <tr>
             <th>Project Name</th>
@@ -35,19 +35,21 @@ const Dashboard = () => {
             <th></th>
           </tr>
         </thead>
-        {data.map((data) => (
-          <ProjectRow 
-            key={data.id}
-            project_name={data.project_name}
-            client_name={data.client_name}
-            component_amount={data.component_amount}
-            estimate_total={data.estimate_total}
-          />
-        ))}
+        <tbody>
+          {data.map((data) => (
+            <ProjectRow 
+              key={data.id}
+              project_name={data.project_name}
+              client_name={data.client_name}
+              component_amount={data.component_amount}
+              estimate_total={data.estimate_total}
+            />
+          ))}
+        </tbody>
       </table>
       
     </div>
   );
 };
 
-export default Dashboard
+export default Projects

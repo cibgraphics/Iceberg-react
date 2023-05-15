@@ -5,7 +5,8 @@ import RootLayout from './components/layout/RootLayout';
 import AuthLayout from './components/layout/AuthLayout';
 import AppLayout from './components/layout/AppLayout';
 import Home from './pages/Home';
-import Dashboard from './pages/app/Dashboard';
+import Projects from './pages/app/Projects';
+import Clients from './pages/app/Clients';
 import Settings from './pages/app/Settings';
 import Login from './pages/auth/Login';
 
@@ -23,7 +24,8 @@ function App() {
           <Route path='/login' element={<Login/>}/>
         </Route>
         <Route path='/app' element={<AppLayout/>}>
-          <Route path='/app' element={<Dashboard/>}/>
+          <Route path='/app' element={<Projects/>}/>
+          <Route path='/app/clients' element={<Clients/>}/>
           <Route path='/app/settings' element={<Settings/>}/>
         </Route>
       </Routes>
