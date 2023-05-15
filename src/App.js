@@ -1,5 +1,6 @@
 import { Routes, Route} from 'react-router-dom';
 
+// Import Layout and Pages
 import RootLayout from './components/layout/RootLayout';
 import AuthLayout from './components/layout/AuthLayout';
 import AppLayout from './components/layout/AppLayout';
@@ -8,6 +9,8 @@ import Dashboard from './pages/app/Dashboard';
 import Settings from './pages/app/Settings';
 import Login from './pages/auth/Login';
 
+// Import All the CSS
+import './styles/style.scss';
 
 function App() {
   return (

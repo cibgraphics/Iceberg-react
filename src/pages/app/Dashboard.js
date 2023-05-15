@@ -28,7 +28,7 @@ const Dashboard = () => {
       <table style={{width: '100%'}}>
         <thead>
           <tr>
-            <th>Project</th>
+            <th>Project Name</th>
             <th>Client Name</th>
             <th>Components</th>
             <th>Estimate</th>
