@@ -25,9 +25,16 @@ const data = [
 
 const Projects = () => {
   return (
-    <div class="container">
+    <div className="container">
       <div className="content">
-        <h1>Projects</h1>
+        <div className="page-header">
+          <h1>Projects</h1>
+          <div className="page-actions">
+            <a href="#0" className="button">
+              New Project
+            </a>
+          </div>
+        </div>
         <table>
           <thead>
             <tr>

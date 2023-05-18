@@ -7,11 +7,17 @@ BUTTONS
 
 .button {
   cursor: pointer;
-  display: inline-block;
   border: none;
   -webkit-appearance: none;
+  background-color: var(--primary);
+  color: var(--white);
+  display: inline-flex;
+  padding: 9px 8px;
+  gap: 8px;
+  border-radius: 4px;
+  @include rem-size(14px);
 
   &:hover {
-
+    background-color: var(--primary-light);
   }
 }

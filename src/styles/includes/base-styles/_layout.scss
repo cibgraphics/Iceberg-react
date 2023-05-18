@@ -71,6 +71,20 @@ main {
 }
 
 
-.block-content {
+
+// Page Header
+
+.page-header {
+  display: flex;
+  align-items: flex-end;
   margin-bottom: 20px;
+
+  .page-actions {
+    margin-left: auto;
+  }
+
+  h1 {
+    @include rem-size(24px);
+    margin-bottom: 0;
+  }
 }

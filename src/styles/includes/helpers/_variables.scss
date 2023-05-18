@@ -66,10 +66,11 @@ COLORS
   --error-80:               #AD050B;
 
   --primary:                #374A67;
+  --primary-light:          #476085;
 
 
-  --base-color:             #fff;
-  --content-background:     #fff;
+  --base-color:             var(--white);
+  --content-background:     var(--white);
 
   // Text
   --text-color:             var(--gray-70);

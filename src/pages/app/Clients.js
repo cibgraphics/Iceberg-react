@@ -28,7 +28,14 @@ const Clients = () => {
   return (
     <div className="container">
       <div className="content">
-        <h1>Clients</h1>
+        <div className="page-header">
+          <h1>Clients</h1>
+          <div className="page-actions">
+            <a href="#0" className="button">
+              New Client
+            </a>
+          </div>
+        </div>
         <table>
           <thead>
             <tr>
