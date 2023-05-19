@@ -8,7 +8,9 @@ const ProjectRow = (props) => {
       <td>{props.component_amount}</td>
       <td>{props.estimate_total}</td>
       <td className="table-row-actions">
-        <Link to="#0">...</Link>
+        <Link to="#0">
+          <i className="icon-more_vert more-icon"></i>
+        </Link>
       </td>
     </tr>
   );

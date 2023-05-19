@@ -69,3 +69,7 @@ td {
     width: 1%;
     white-space: nowrap;
 }
+
+.more-icon {
+    @include rem-size(18px);
+}
