@@ -1,4 +1,5 @@
 import ProjectRow from "./ProjectRow";
+import Button from "../../components/UI/Button";
 
 const data = [
   {"id":1,"project_name":"Daltfresh","client_name":"Murazik, O'Keefe and Corkery","component_amount":62,"estimate_total":158},
@@ -30,9 +31,7 @@ const Projects = () => {
         <div className="page-header">
           <h1>Projects</h1>
           <div className="page-actions">
-            <a href="#0" className="button">
-              New Project
-            </a>
+            <Button link="#0" icon={'icon-add'} buttonText={'Add Project'} />
           </div>
         </div>
         <table>

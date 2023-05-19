@@ -1,4 +1,5 @@
 import ClientRow from "./ClientRow";
+import Button from "../../components/UI/Button";
 
 const Clients = () => {
 
@@ -31,9 +32,7 @@ const Clients = () => {
         <div className="page-header">
           <h1>Clients</h1>
           <div className="page-actions">
-            <a href="#0" className="button">
-              New Client
-            </a>
+            <Button link="#0" icon={"icon-add"} buttonText={"Add Client"} />
           </div>
         </div>
         <table>

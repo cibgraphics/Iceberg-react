@@ -12,12 +12,26 @@ BUTTONS
   background-color: var(--primary);
   color: var(--white);
   display: inline-flex;
-  padding: 9px 16px;
+  align-items: center;
+  padding: 12px 16px;
   gap: 8px;
   border-radius: 4px;
   @include rem-size(14px);
 
   &:hover {
     background-color: var(--primary-light);
+  }
+
+  .button-icon {
+    i {
+      @include rem-size(16px);
+    }
+  }
+
+  // Button Variations
+
+  &.ghost {
+    background: transparent;
+    color: var(--text-color);
   }
 }
