@@ -10,7 +10,9 @@ table {
 }
 
 thead {
-
+    tr {
+        background: var(--gray-06);
+    }
 }
 
 tfoot {
@@ -27,13 +29,19 @@ tr {
 
 }
 
+th, td {
+    padding: 14px 16px;
+    color: var(--text-color);
+}
+
 th {
-    padding: 12px;
     text-align: left;
+    @include rem-size(9px);
+    text-transform: uppercase;
 }
 
 td {
-    padding: 12px;
+    @include rem-size(14px);
 }
 
 .cell-5  {width:5%;}
@@ -55,3 +63,13 @@ td {
 .cell-85 {width:85%;}
 .cell-90 {width:90%;}
 .cell-95 {width:95%;}
+
+
+.table-row-actions {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.more-icon {
+    @include rem-size(18px);
+}

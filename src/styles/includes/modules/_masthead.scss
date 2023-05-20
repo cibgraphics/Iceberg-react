@@ -8,6 +8,7 @@ MASTHEAD
 .app-header {
 	background: #eaeaea;
 	position: relative;
+	margin-bottom: 30px;
 
 	&::after {
 		content: '';
@@ -23,7 +24,7 @@ MASTHEAD
 		display: flex;
 		align-items: center;
 		gap: 40px;
-		padding: 10px 20px;
+		padding: 10px 0;
 		position: relative;
 		z-index: 1;
 	}
