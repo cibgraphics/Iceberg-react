@@ -4,72 +4,107 @@ TABLES
 -----------------------------------------
 */
 
-
 table {
-    width: 100%;
+  width: 100%;
 }
 
 thead {
-    tr {
-        background: var(--gray-06);
-    }
+  tr {
+    background: var(--gray-06);
+  }
 }
 
 tfoot {
-
 }
 
 tbody {
-    tr {
-        border-bottom: 1px solid #E7E7E7;
-    }
+  tr {
+    border-bottom: 1px solid #e7e7e7;
+  }
 }
 
 tr {
-
 }
 
-th, td {
-    padding: 14px 16px;
-    color: var(--text-color);
+th,
+td {
+  padding: 14px 16px;
+  color: var(--text-color);
 }
 
 th {
-    text-align: left;
-    @include rem-size(9px);
-    text-transform: uppercase;
+  text-align: left;
+  @include rem-size(9px);
+  text-transform: uppercase;
 }
 
 td {
-    @include rem-size(14px);
+  @include rem-size(14px);
 }
 
-.cell-5  {width:5%;}
-.cell-10 {width:10%;}
-.cell-15 {width:15%;}
-.cell-20 {width:20%;}
-.cell-25 {width:25%;}
-.cell-30 {width:30%;}
-.cell-35 {width:35%;}
-.cell-40 {width:40%;}
-.cell-45 {width:45%;}
-.cell-50 {width:50%;}
-.cell-55 {width:55%;}
-.cell-60 {width:60%;}
-.cell-65 {width:65%;}
-.cell-70 {width:70%;}
-.cell-75 {width:75%;}
-.cell-80 {width:80%;}
-.cell-85 {width:85%;}
-.cell-90 {width:90%;}
-.cell-95 {width:95%;}
-
+.cell-5 {
+  width: 5%;
+}
+.cell-10 {
+  width: 10%;
+}
+.cell-15 {
+  width: 15%;
+}
+.cell-20 {
+  width: 20%;
+}
+.cell-25 {
+  width: 25%;
+}
+.cell-30 {
+  width: 30%;
+}
+.cell-35 {
+  width: 35%;
+}
+.cell-40 {
+  width: 40%;
+}
+.cell-45 {
+  width: 45%;
+}
+.cell-50 {
+  width: 50%;
+}
+.cell-55 {
+  width: 55%;
+}
+.cell-60 {
+  width: 60%;
+}
+.cell-65 {
+  width: 65%;
+}
+.cell-70 {
+  width: 70%;
+}
+.cell-75 {
+  width: 75%;
+}
+.cell-80 {
+  width: 80%;
+}
+.cell-85 {
+  width: 85%;
+}
+.cell-90 {
+  width: 90%;
+}
+.cell-95 {
+  width: 95%;
+}
 
 .table-row-actions {
-    width: 1%;
-    white-space: nowrap;
+  width: 1%;
+  white-space: nowrap;
 }
 
 .more-icon {
-    @include rem-size(18px);
+  @include rem-size(18px);
 }

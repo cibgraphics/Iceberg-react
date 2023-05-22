@@ -4,7 +4,6 @@ LAYOUT
 -----------------------------------------
 */
 
-
 /* Margin and Padding */
 $baseSize: 0;
 
@@ -68,7 +67,12 @@ main {
   position: relative;
 }
 
-
+.well {
+  background: var(--gray-03);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 4px;
+}
 
 // Page Header
 

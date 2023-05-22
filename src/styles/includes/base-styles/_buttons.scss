@@ -4,7 +4,6 @@ BUTTONS
 -----------------------------------------
 */
 
-
 .button {
   cursor: pointer;
   border: none;
@@ -33,5 +32,27 @@ BUTTONS
   &.ghost {
     background: transparent;
     color: var(--text-color);
+  }
+
+  &.gray {
+    background: var(--gray-10);
+    color: var(--text-color);
+
+    &:hover {
+      background: var(--gray-06);
+    }
+  }
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.right {
+    justify-content: flex-end;
   }
 }
