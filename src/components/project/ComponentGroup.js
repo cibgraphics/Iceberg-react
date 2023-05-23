@@ -49,8 +49,17 @@ const ComponentGroup = () => {
               <td className="cell-compress move-row">
                 <i className="icon-drag_indicator"></i>
               </td>
-              <td>{data.component_name}</td>
-              <td>{data.component_hours}</td>
+              <td>
+                <input type="text" placeholder="Component Name" />
+              </td>
+              <td className="cell-compress align-right">
+                <input
+                  type="text"
+                  placeholder="0"
+                  className="component-amount-input"
+                />
+                Hours
+              </td>
               <td className="table-row-actions"></td>
             </tr>
           ))}

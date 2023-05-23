@@ -17,4 +17,20 @@
       color: var(--white);
     }
   }
+
+  input {
+    border: none;
+  }
+
+  tbody {
+    tr:has(input:focus) {
+      background: var(--gray-03);
+    }
+  }
+
+  .component-amount-input {
+    width: 40px;
+    text-align: right;
+    margin-right: 8px;
+  }
 }
