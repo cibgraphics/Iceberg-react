@@ -1,0 +1,29 @@
+.project-total {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--primary);
+  color: var(--white);
+  height: var(--project-bar-height);
+  display: flex;
+  align-items: center;
+
+  p {
+    color: var(--white);
+    @include rem-size(20px);
+    font-weight: bold;
+
+    span {
+      @include rem-size(12px);
+      margin-right: 20px;
+    }
+  }
+
+  .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

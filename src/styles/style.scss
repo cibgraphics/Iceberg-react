@@ -3,12 +3,8 @@
 @import "includes/helpers/_variables.scss";
 @import "includes/helpers/_mixins.scss";
 
-
-
 /* Grid */
 @import "includes/grid/gridlex.scss";
-
-
 
 /* Partials */
 @import "includes/base-styles/_animation.scss";
@@ -21,13 +17,12 @@
 @import "includes/base-styles/_forms.scss";
 @import "includes/base-styles/_navigation.scss";
 
-
-
 /* Modules */
 @import "includes/modules/_masthead.scss";
 @import "includes/modules/_footer.scss";
 
-
+@import "includes/modules/_project.scss";
+@import "includes/modules/_project-total.scss";
 
 /* Vendors */
 @import "includes/utility/_vendor-overrides.scss";

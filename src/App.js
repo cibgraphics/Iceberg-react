@@ -6,6 +6,7 @@ import AuthLayout from "./components/layout/AuthLayout";
 import AppLayout from "./components/layout/AppLayout";
 import Home from "./pages/Home";
 import Projects from "./pages/app/Projects";
+import Project from "./pages/app/Project";
 import AddProject from "./pages/app/AddProject";
 import Clients from "./pages/app/Clients";
 import Settings from "./pages/app/Settings";
@@ -26,6 +27,7 @@ function App() {
         </Route>
         <Route path="/app" element={<AppLayout />}>
           <Route path="/app" element={<Projects />} />
+          <Route path="/app/project" element={<Project />} />
           <Route path="/app/clients" element={<Clients />} />
           <Route path="/app/settings" element={<Settings />} />
           <Route path="/app/add-project" element={<AddProject />} />

@@ -30,6 +30,10 @@ th,
 td {
   padding: 14px 16px;
   color: var(--text-color);
+
+  &.align-right {
+    text-align: right;
+  }
 }
 
 th {
@@ -100,11 +104,16 @@ td {
   width: 95%;
 }
 
-.table-row-actions {
+.table-row-actions,
+.cell-compress {
   width: 1%;
   white-space: nowrap;
 }
 
 .more-icon {
   @include rem-size(18px);
+}
+
+.move-row {
+  cursor: grab;
 }

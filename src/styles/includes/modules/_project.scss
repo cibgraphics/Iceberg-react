@@ -1,0 +1,20 @@
+.project {
+  padding-bottom: var(--project-bar-height);
+}
+
+.component-group {
+  margin-bottom: 50px;
+}
+
+.component-table {
+  tfoot {
+    tr {
+      background: var(--primary);
+      padding: 12px 30px;
+    }
+
+    td {
+      color: var(--white);
+    }
+  }
+}

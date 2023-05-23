@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import Button from "../../components/UI/Button";
+import ProjectSettings from "../../components/forms/ProjectSettings";
 
 const AddProject = () => {
   return (
@@ -7,45 +9,13 @@ const AddProject = () => {
         <h1>Add Project</h1>
 
         <div className="well">
-          <div className="gridlex">
-            <div className="col-6_sm-12">
-              <div className="input-group">
-                <label htmlFor="">Project Name</label>
-                <input type="text" />
-              </div>
-            </div>
-          </div>
-          <div className="gridlex">
-            <div className="col-6_sm-12">
-              <div className="input-group">
-                <label htmlFor="">Client</label>
-                <input type="text" />
-              </div>
-            </div>
-          </div>
-          <div className="gridlex">
-            <div className="col-6_sm-12">
-              <div className="input-group">
-                <label htmlFor="">Estimate Type</label>
-                <select name="" id="">
-                  <option value="Hours">Hours</option>
-                  <option value="Points">Points</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div className="gridlex">
-            <div className="col-6_sm-12">
-              <div className="input-group">
-                <label htmlFor="">Estimate Padding (%)</label>
-                <input type="text" />
-              </div>
-            </div>
-          </div>
+          <ProjectSettings />
         </div>
 
         <div className="button-group">
-          <Button href={"#0"} buttonText={"Save Project"} />
+          <Link to={"/app/project"} className="button">
+            Save Project
+          </Link>
           <Button href={"#0"} buttonText={"Archive"} class={"gray"} />
         </div>
       </div>

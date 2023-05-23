@@ -4,7 +4,6 @@ FORMS
 -----------------------------------------
 */
 
-
 form {
   margin: 10px 0;
 }
@@ -13,11 +12,12 @@ label {
   display: block;
   @include rem-size(15px);
   color: var(--text-color);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   line-height: 1.4em;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   border: 1px solid #333;
   padding: 10px;
@@ -44,20 +44,26 @@ textarea {
 }
 
 select {
+  appearance: none;
   width: 100%;
-
-  option {
-
-  }
+  border: 1px solid #333;
+  padding: 13px 30px 13px 10px;
+  @include rem-size(16px);
+  color: var(--text-color);
+  border-radius: 5px; // For iOS
+  display: block;
+  line-height: 1;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 5L0.669872 0.5L9.33013 0.500001L5 5Z' fill='%23333333'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 10px 6px;
 }
-
 
 /*
 -----------------------------------------
 FORM LAYOUT
 -----------------------------------------
 */
-
 
 .field-group {
   @include clearfix();
