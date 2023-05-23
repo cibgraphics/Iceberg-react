@@ -20,6 +20,12 @@ tfoot {
 tbody {
   tr {
     border-bottom: 1px solid #e7e7e7;
+    background: var(--white);
+    @include transition();
+
+    &:hover {
+      background: var(--gray-03);
+    }
   }
 }
 
