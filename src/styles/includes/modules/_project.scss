@@ -26,11 +26,42 @@
     tr:has(input:focus) {
       background: var(--gray-03);
     }
+
+    tr:hover,
+    tr:has(input:focus) {
+      .delete i {
+        color: var(--text-color);
+      }
+    }
   }
 
   .component-amount-input {
     width: 40px;
     text-align: right;
     margin-right: 8px;
+  }
+
+  [class^="icon-"],
+  [class*=" icon-"] {
+    @include rem-size(16px);
+  }
+
+  .delete-cover {
+  }
+
+  .delete {
+    padding: 5px 3px;
+    i {
+      @include transition();
+      color: var(--gray-10);
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      i {
+        color: var(--error-50) !important;
+      }
+    }
   }
 }

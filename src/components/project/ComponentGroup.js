@@ -54,13 +54,17 @@ const ComponentGroup = () => {
               </td>
               <td className="cell-compress align-right">
                 <input
-                  type="text"
+                  type="number"
                   placeholder="0"
                   className="component-amount-input"
                 />
                 Hours
               </td>
-              <td className="table-row-actions"></td>
+              <td className="table-row-actions">
+                <div className="delete">
+                  <i className="icon-delete"></i>
+                </div>
+              </td>
             </tr>
           ))}
         </tbody>
