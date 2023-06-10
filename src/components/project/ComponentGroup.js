@@ -67,6 +67,12 @@ const ComponentGroup = () => {
               </td>
             </tr>
           ))}
+          <tr>
+            <td colSpan="4" className="add-new-row">
+              <i className="icon-add add-component"></i>
+              &nbsp; Add New Row
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>

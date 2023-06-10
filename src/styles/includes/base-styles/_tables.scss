@@ -36,6 +36,7 @@ th,
 td {
   padding: 14px 16px;
   color: var(--text-color);
+  vertical-align: middle;
 
   &.align-right {
     text-align: right;
@@ -122,4 +123,22 @@ td {
 
 .move-row {
   cursor: grab;
+}
+
+.add-component {
+  background: var(--success-50);
+  color: var(--white);
+  border-radius: 4px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.add-new-row {
+  text-align: center;
+  cursor: pointer;
+  @include transition();
+
+  &:hover {
+    background: var(--success-05);
+  }
 }
