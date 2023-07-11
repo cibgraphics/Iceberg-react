@@ -1,5 +1,9 @@
+import React, { useState, useEffect } from 'react';
+import ProjectRow from "../../components/project/ProjectRow";
+
+
 const ComponentGroup = () => {
-  const componentData = [
+  const [componentData, setComponentData] = useState([
     {
       id: 1,
       component_name: "2-362 - Termite Control",
@@ -30,7 +34,39 @@ const ComponentGroup = () => {
       component_name: "2-870 - Sculpture/Ornamental",
       component_hours: 7,
     },
-  ];
+  ]);
+
+  const [totalHours, setTotalHours] = useState(0);
+  const [rowCount, setRowCount] = useState(0);
+
+  useEffect(() => {
+    // Calculate the initial total hours
+    const initialTotalHours = componentData.reduce((total, data) => total + data.component_hours, 0);
+    setTotalHours(initialTotalHours);
+    setRowCount(componentData.length);
+  }, [componentData]);
+
+
+  const updateTotalHours = (oldValue, newValue) => {
+    const difference = newValue - oldValue;
+    setTotalHours(totalHours + difference);
+  };
+
+  const handleAddNewRow = () => {
+    const newRow = {
+      id: componentData.length + 1,
+      component_name: "",
+      component_hours: 0,
+    };
+
+    setComponentData([...componentData, newRow]);
+  };
+
+  const handleDeleteRow = (rowId) => {
+    const updatedData = componentData.filter((data) => data.id !== rowId);
+    setComponentData(updatedData);
+  };
+
 
   return (
     <div className="component-group">
@@ -38,37 +74,23 @@ const ComponentGroup = () => {
         <tfoot>
           <tr>
             <td className="cell-compress"></td>
-            <td>Component Total: 6</td>
-            <td className="cell-compres align-right">6 Hours</td>
+            <td>Component Total: {rowCount}</td>
+            <td className="cell-compres align-right">{totalHours} Hours</td>
             <td className="table-row-actions"></td>
           </tr>
         </tfoot>
         <tbody>
           {componentData.map((data) => (
-            <tr key={data.id}>
-              <td className="cell-compress move-row">
-                <i className="icon-drag_indicator"></i>
-              </td>
-              <td>
-                <input type="text" placeholder="Component Name" />
-              </td>
-              <td className="cell-compress align-right">
-                <input
-                  type="number"
-                  placeholder="0"
-                  className="component-amount-input"
-                />
-                Hours
-              </td>
-              <td className="table-row-actions">
-                <div className="delete">
-                  <i className="icon-delete"></i>
-                </div>
-              </td>
-            </tr>
+            <ProjectRow
+              key={data.id}
+              component_name={data.component_name}
+              component_hours={data.component_hours}
+              updateTotalHours={updateTotalHours}
+              onDelete={() => handleDeleteRow(data.id)}
+            />
           ))}
           <tr>
-            <td colSpan="4" className="add-new-row">
+            <td colSpan="4" className="add-new-row" onClick={handleAddNewRow}>
               <i className="icon-add add-component"></i>
               &nbsp; Add New Row
             </td>

@@ -13,7 +13,10 @@ const ProjectSettings = () => {
         <div className="col-6_sm-12">
           <div className="input-group">
             <label htmlFor="">Client</label>
-            <input type="text" />
+            <select name="" id="">
+              <option>Client Name</option>
+              <option>Client Name</option>
+            </select>
           </div>
         </div>
       </div>
