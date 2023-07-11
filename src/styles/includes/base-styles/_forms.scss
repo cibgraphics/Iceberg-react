@@ -31,6 +31,10 @@ textarea {
   }
 }
 
+input + input {
+  margin-top: 10px;
+}
+
 textarea {
   min-height: 200px;
 

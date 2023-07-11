@@ -9,6 +9,7 @@ import Projects from "./pages/app/Projects";
 import Project from "./pages/app/Project";
 import AddProject from "./pages/app/AddProject";
 import Clients from "./pages/app/Clients";
+import AddClient from "./pages/app/AddClient";
 import Settings from "./pages/app/Settings";
 import Login from "./pages/auth/Login";
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/app" element={<Projects />} />
           <Route path="/app/project" element={<Project />} />
           <Route path="/app/clients" element={<Clients />} />
+          <Route path="/app/clients/add" element={<AddClient />} />
           <Route path="/app/settings" element={<Settings />} />
           <Route path="/app/add-project" element={<AddProject />} />
         </Route>

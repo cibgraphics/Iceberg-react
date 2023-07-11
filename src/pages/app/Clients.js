@@ -155,7 +155,7 @@ const Clients = () => {
         <div className="page-header">
           <h1>Clients</h1>
           <div className="page-actions">
-            <Button link="#0" icon={"icon-add"} buttonText={"Add Client"} />
+            <Button link="/app/clients/add" icon={"icon-add"} buttonText={"Add Client"} />
           </div>
         </div>
         <table>
