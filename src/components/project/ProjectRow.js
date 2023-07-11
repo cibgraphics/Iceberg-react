@@ -12,9 +12,9 @@ const ProjectRow = (props) => {
 
   const handleHoursChange = (event) => {
     const changedValue = event.target.value;
-    setComponentHours(changedValue);
-    props.updateTotalHours(props.component_hours, changedValue);
-  }
+    props.updateTotalHours(componentHours, changedValue);
+    setComponentHours(changedValue); // Update the componentHours state with the new value
+  };
 
   const handleDelete = () => {
     props.onDelete(); // Call the onDelete function from the parent component

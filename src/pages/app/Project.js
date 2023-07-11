@@ -1,7 +1,14 @@
+import React, { useState } from 'react';
 import ProjectTotal from "../../components/project/ProjectTotal";
 import ComponentGroup from "../../components/project/ComponentGroup";
 
 const Project = () => {
+  const [projectTotalHours, setProjectTotalHours] = useState(0);
+
+  const updateTotalHours = (newTotalHours) => {
+    setProjectTotalHours(newTotalHours);
+  };
+
   return (
     <>
       <div className="container project">
@@ -9,14 +16,14 @@ const Project = () => {
           <h1>Project Name</h1>
 
           <div className="project-estimation-workarea">
-            <ComponentGroup />
-            <ComponentGroup />
-            <ComponentGroup />
+            <ComponentGroup totalHours={projectTotalHours} updateTotalHours={updateTotalHours} />
+            <ComponentGroup totalHours={projectTotalHours} updateTotalHours={updateTotalHours} />
+            <ComponentGroup totalHours={projectTotalHours} updateTotalHours={updateTotalHours} />
           </div>
         </div>
       </div>
 
-      <ProjectTotal />
+      <ProjectTotal totalHours={projectTotalHours} />
     </>
   );
 };

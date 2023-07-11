@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProjectRow from "../../components/project/ProjectRow";
 
 
-const ComponentGroup = () => {
+const ComponentGroup = (props) => {
   const [componentData, setComponentData] = useState([
     {
       id: 1,
