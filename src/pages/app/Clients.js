@@ -1,4 +1,4 @@
-import ClientRow from "./ClientRow";
+import ClientRow from "../../components/clients//ClientRow";
 import Button from "../../components/UI/Button";
 
 const Clients = () => {

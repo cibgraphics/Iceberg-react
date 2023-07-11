@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ProjectTotal from "../../components/project/ProjectTotal";
-import ComponentGroup from "../../components/project/ComponentGroup";
+import ProjectTotal from "../../components/projects/ProjectTotal";
+import ComponentGroup from "../../components/projects/ComponentGroup";
 
 const Project = () => {
   const [projectTotalHours, setProjectTotalHours] = useState(0);

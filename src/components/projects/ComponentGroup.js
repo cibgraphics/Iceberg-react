@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ComponentRow from "../../components/project/ComponentRow";
+import ComponentRow from "../../components/projects/ComponentRow";
 
 const ComponentGroup = (props) => {
   const [componentData, setComponentData] = useState([

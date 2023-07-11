@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import ProjectRow from "./ProjectRow";
+import ProjectRow from "../../components/projects/ProjectRow";
 // import Button from "../../components/UI/Button";
 
 const data = [
