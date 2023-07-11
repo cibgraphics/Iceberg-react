@@ -4,6 +4,7 @@ const ClientRow = (props) => {
   return (
     <tr>
       <td>{props.client_name}</td>
+      <td>{props.first_name} {props.last_name}</td>
       <td>{props.project_total}</td>
       <td className="table-row-actions">
         <Link to="#0">

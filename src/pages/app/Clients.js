@@ -3,28 +3,151 @@ import Button from "../../components/UI/Button";
 
 const Clients = () => {
 
-  const clientData = [
-    { id: 1, client_name: "Youfeed", project_total: 7 },
-    { id: 2, client_name: "Meevee", project_total: 8 },
-    { id: 3, client_name: "Browseblab", project_total: 6 },
-    { id: 4, client_name: "Ainyx", project_total: 6 },
-    { id: 5, client_name: "Skiptube", project_total: 8 },
-    { id: 6, client_name: "Lajo", project_total: 2 },
-    { id: 7, client_name: "Pixope", project_total: 5 },
-    { id: 8, client_name: "Trilia", project_total: 8 },
-    { id: 9, client_name: "Feedmix", project_total: 4 },
-    { id: 10, client_name: "Kwideo", project_total: 5 },
-    { id: 11, client_name: "Photolist", project_total: 10 },
-    { id: 12, client_name: "Skyndu", project_total: 2 },
-    { id: 13, client_name: "Jabberstorm", project_total: 5 },
-    { id: 14, client_name: "Tagfeed", project_total: 1 },
-    { id: 15, client_name: "Trunyx", project_total: 5 },
-    { id: 16, client_name: "Camido", project_total: 2 },
-    { id: 17, client_name: "Quimba", project_total: 1 },
-    { id: 18, client_name: "Thoughtsphere", project_total: 8 },
-    { id: 19, client_name: "Cogidoo", project_total: 4 },
-    { id: 20, client_name: "Mybuzz", project_total: 3 },
-  ];
+  const clientData = 
+    [
+      {
+        "id": 1,
+        "first_name": "Deanne",
+        "last_name": "Shalliker",
+        "client_name": "Smith, Schultz and Wintheiser",
+        "project_total": 8
+      },
+      {
+        "id": 2,
+        "first_name": "Heall",
+        "last_name": "Gillebride",
+        "client_name": "Koch, Sipes and Hayes",
+        "project_total": 8
+      },
+      {
+        "id": 3,
+        "first_name": "Jone",
+        "last_name": "Decayette",
+        "client_name": "Macejkovic Group",
+        "project_total": 8
+      },
+      {
+        "id": 4,
+        "first_name": "Dwayne",
+        "last_name": "Martill",
+        "client_name": "Gulgowski Inc",
+        "project_total": 9
+      },
+      {
+        "id": 5,
+        "first_name": "Finn",
+        "last_name": "Barr",
+        "client_name": "Mohr-Little",
+        "project_total": 2
+      },
+      {
+        "id": 6,
+        "first_name": "Leonid",
+        "last_name": "McKennan",
+        "client_name": "Zemlak-Beier",
+        "project_total": 6
+      },
+      {
+        "id": 7,
+        "first_name": "Kara-lynn",
+        "last_name": "Spurge",
+        "client_name": "Lesch, Predovic and Von",
+        "project_total": 6
+      },
+      {
+        "id": 8,
+        "first_name": "Bidget",
+        "last_name": "O'Suaird",
+        "client_name": "Huel Group",
+        "project_total": 9
+      },
+      {
+        "id": 9,
+        "first_name": "Rozanne",
+        "last_name": "Eilhart",
+        "client_name": "Lind, Kulas and Wolff",
+        "project_total": 1
+      },
+      {
+        "id": 10,
+        "first_name": "Godfree",
+        "last_name": "Bealton",
+        "client_name": "Gerlach LLC",
+        "project_total": 9
+      },
+      {
+        "id": 11,
+        "first_name": "Clemmy",
+        "last_name": "Digginson",
+        "client_name": "Harvey Group",
+        "project_total": 7
+      },
+      {
+        "id": 12,
+        "first_name": "Reggi",
+        "last_name": "Mertel",
+        "client_name": "Pagac-Bechtelar",
+        "project_total": 7
+      },
+      {
+        "id": 13,
+        "first_name": "Lorry",
+        "last_name": "Zottoli",
+        "client_name": "Heaney, Beier and Schmeler",
+        "project_total": 1
+      },
+      {
+        "id": 14,
+        "first_name": "Egan",
+        "last_name": "Canto",
+        "client_name": "Hayes Group",
+        "project_total": 2
+      },
+      {
+        "id": 15,
+        "first_name": "Philis",
+        "last_name": "Domenc",
+        "client_name": "Gulgowski, Shields and Armstrong",
+        "project_total": 6
+      },
+      {
+        "id": 16,
+        "first_name": "Killian",
+        "last_name": "Spain-Gower",
+        "client_name": "Schmidt, Swift and Kerluke",
+        "project_total": 9
+      },
+      {
+        "id": 17,
+        "first_name": "Wernher",
+        "last_name": "Duckers",
+        "client_name": "Bartoletti, Upton and Goodwin",
+        "project_total": 2
+      },
+      {
+        "id": 18,
+        "first_name": "Sal",
+        "last_name": "Bramer",
+        "client_name": "Okuneva-Mosciski",
+        "project_total": 5
+      },
+      {
+        "id": 19,
+        "first_name": "Tirrell",
+        "last_name": "Gounel",
+        "client_name": "Goodwin Inc",
+        "project_total": 8
+      },
+      {
+        "id": 20,
+        "first_name": "Neils",
+        "last_name": "Nano",
+        "client_name": "Goyette, Predovic and Jacobi",
+        "project_total": 7
+      }
+    ];
+
+
 
   return (
     <div className="container">
@@ -39,6 +162,7 @@ const Clients = () => {
           <thead>
             <tr>
               <th>Client Name</th>
+              <th>Contact Name</th>
               <th>Number of Projects</th>
               <th></th>
             </tr>
@@ -47,6 +171,8 @@ const Clients = () => {
             {clientData.map((data) => (
               <ClientRow
                 key={data.id}
+                first_name={data.first_name}
+                last_name={data.last_name}
                 client_name={data.client_name}
                 project_total={data.project_total}
               />
