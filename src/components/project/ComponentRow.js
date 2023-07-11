@@ -1,27 +1,26 @@
 import React, { useState } from 'react';
 
-const ProjectRow = (props) => {
-
+const ComponentRow = (props) => {
   const [componentName, setComponentName] = useState(props.component_name);
   const [componentHours, setComponentHours] = useState(props.component_hours);
-  
+
   const handleNameChange = (event) => {
     const changedValue = event.target.value;
     setComponentName(changedValue);
-  }
+  };
 
   const handleHoursChange = (event) => {
     const changedValue = event.target.value;
     props.updateTotalHours(componentHours, changedValue);
-    setComponentHours(changedValue); // Update the componentHours state with the new value
+    setComponentHours(changedValue);
   };
 
   const handleDelete = () => {
-    props.onDelete(); // Call the onDelete function from the parent component
-  }
+    props.onDelete();
+  };
 
   return (
-    <tr>
+    <tr key={props.componentId}>
       <td className="cell-compress move-row">
         <i className="icon-drag_indicator"></i>
       </td>
@@ -49,7 +48,7 @@ const ProjectRow = (props) => {
         </div>
       </td>
     </tr>
-  )
+  );
 };
 
-export default ProjectRow;
+export default ComponentRow;

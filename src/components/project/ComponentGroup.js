@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ProjectRow from "../../components/project/ProjectRow";
-
+import ComponentRow from "../../components/project/ComponentRow";
 
 const ComponentGroup = (props) => {
   const [componentData, setComponentData] = useState([
@@ -38,6 +37,7 @@ const ComponentGroup = (props) => {
 
   const [totalHours, setTotalHours] = useState(0);
   const [rowCount, setRowCount] = useState(0);
+  const [idCounter, setIdCounter] = useState(6); // Initialize the id counter with the last used id
 
   useEffect(() => {
     // Calculate the initial total hours
@@ -46,6 +46,10 @@ const ComponentGroup = (props) => {
     setRowCount(componentData.length);
   }, [componentData]);
 
+  const generateUniqueId = () => {
+    setIdCounter((prevCounter) => prevCounter + 1);
+    return idCounter + 1;
+  };
 
   const updateTotalHours = (oldValue, newValue) => {
     const difference = newValue - oldValue;
@@ -54,7 +58,7 @@ const ComponentGroup = (props) => {
 
   const handleAddNewRow = () => {
     const newRow = {
-      id: componentData.length + 1,
+      id: generateUniqueId(),
       component_name: "",
       component_hours: 0,
     };
@@ -66,7 +70,6 @@ const ComponentGroup = (props) => {
     const updatedData = componentData.filter((data) => data.id !== rowId);
     setComponentData(updatedData);
   };
-
 
   return (
     <div className="component-group">
@@ -81,8 +84,9 @@ const ComponentGroup = (props) => {
         </tfoot>
         <tbody>
           {componentData.map((data) => (
-            <ProjectRow
+            <ComponentRow
               key={data.id}
+              componentId={data.id}
               component_name={data.component_name}
               component_hours={data.component_hours}
               updateTotalHours={updateTotalHours}
