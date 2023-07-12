@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../../components/UI/Button";
 import ProjectSettings from "../../components/forms/ProjectSettings";
+import withAuthentication from './../../components/withAuthentication';
 
 const AddProject = () => {
   return (
@@ -23,4 +24,4 @@ const AddProject = () => {
   );
 };
 
-export default AddProject;
+export default withAuthentication(AddProject);

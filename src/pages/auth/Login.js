@@ -1,23 +1,32 @@
-// import { initializeApp } from "firebase/app";
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyDE38uy_h3mtmr3tx5__l_sfH3kgvogrHE",
-//   authDomain: "iceberg-2f78e.firebaseapp.com",
-//   projectId: "iceberg-2f78e",
-//   storageBucket: "iceberg-2f78e.appspot.com",
-//   messagingSenderId: "507528991944",
-//   appId: "1:507528991944:web:ef132584f57602d29f41fd",
-//   measurementId: "G-SE1V0ZKYNG"
-// };
-
-// const app = initializeApp(firebaseConfig);
+import firebase from './../../firebase';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+      .then(() => {
+        // Login successful
+        // Perform any additional actions after login if needed
+        navigate('/app'); // Navigate to app page after successful login
+      })
+      .catch((error) => {
+        // Handle login error
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // Display error to the user or handle it accordingly
+      });
+  };
+
   return (
-    <div>
-      
+    <div className="container">
+      <div className="content text-center">
+        <button className="button" onClick={handleLogin}>Login with Google</button>
+      </div>
     </div>
   );
-};
+}
 
-export default Login
+export default Login;

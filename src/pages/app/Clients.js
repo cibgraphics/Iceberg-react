@@ -1,3 +1,4 @@
+import withAuthentication from './../../components/withAuthentication';
 import ClientRow from "../../components/clients//ClientRow";
 import Button from "../../components/UI/Button";
 
@@ -184,4 +185,4 @@ const Clients = () => {
   );
 };
 
-export default Clients
+export default withAuthentication(Clients)

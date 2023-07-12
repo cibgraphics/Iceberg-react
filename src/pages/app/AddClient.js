@@ -1,24 +1,30 @@
-import { Link } from "react-router-dom";
+// import React, { useState } from 'react';
 import ClientSettings from "../../components/forms/ClientSettings";
+import withAuthentication from './../../components/withAuthentication';
 
-const AddProject = () => {
+const AddProject = (props) => {
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <div className="container">
       <div className="content">
         <h1>Add Client</h1>
 
         <div className="well">
-          <ClientSettings />
+          <form onSubmit={submitHandler}>
+            <ClientSettings />
+          </form>
         </div>
 
         <div className="button-group">
-          <Link to={"/app/clients"} className="button">
-            Save Client
-          </Link>
+          <button type='submit' className="button">Add Expense</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default AddProject;
+export default withAuthentication(AddProject);

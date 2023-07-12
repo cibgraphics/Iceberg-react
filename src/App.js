@@ -1,6 +1,5 @@
-import { Routes, Route } from "react-router-dom";
-
-// Import Layout and Pages
+import { Routes, Route, Outlet } from 'react-router-dom';
+import AuthChecker from './components/AuthChecker';
 import RootLayout from "./components/layout/RootLayout";
 import AuthLayout from "./components/layout/AuthLayout";
 import AppLayout from "./components/layout/AppLayout";
@@ -20,19 +19,19 @@ function App() {
   return (
     <div className="App">
       <Routes>
+        <Route path="/login/*" element={<AuthLayout />}>
+          <Route index element={<Login />} />
+        </Route>
         <Route path="/" element={<RootLayout />}>
-          <Route path="/" element={<Home />} />
+          <Route index element={<Home />} />
         </Route>
-        <Route path="/login" element={<AuthLayout />}>
-          <Route path="/login" element={<Login />} />
-        </Route>
-        <Route path="/app" element={<AppLayout />}>
-          <Route path="/app" element={<Projects />} />
-          <Route path="/app/project" element={<Project />} />
-          <Route path="/app/clients" element={<Clients />} />
-          <Route path="/app/clients/add" element={<AddClient />} />
-          <Route path="/app/settings" element={<Settings />} />
-          <Route path="/app/add-project" element={<AddProject />} />
+        <Route path="app/*" element={<AppLayout />}>
+          <Route index element={<Projects />} />
+          <Route path="project" element={<Project />} />
+          <Route path="clients" element={<Clients />} />
+          <Route path="clients/add" element={<AddClient />} />
+          <Route path="settings" element={<Settings />} />
+          <Route path="add-project" element={<AddProject />} />
         </Route>
       </Routes>
     </div>

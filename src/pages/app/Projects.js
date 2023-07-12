@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import withAuthentication from './../../components/withAuthentication';
 
 import ProjectRow from "../../components/projects/ProjectRow";
 // import Button from "../../components/UI/Button";
@@ -186,4 +187,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default withAuthentication(Projects);

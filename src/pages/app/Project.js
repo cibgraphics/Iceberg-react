@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProjectTotal from "../../components/projects/ProjectTotal";
 import ComponentGroup from "../../components/projects/ComponentGroup";
+import withAuthentication from './../../components/withAuthentication';
 
 const Project = () => {
   const [projectTotalHours, setProjectTotalHours] = useState(0);
@@ -28,4 +29,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default withAuthentication(Project);
